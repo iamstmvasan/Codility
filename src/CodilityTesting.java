@@ -5,9 +5,14 @@ public class CodilityTesting {
         binaryGap.process();
         binaryGap.output();*/
 
-        CyclicRotation cyclicRotation = new CyclicRotation();
+        /*CyclicRotation cyclicRotation = new CyclicRotation();
         cyclicRotation.input();
         cyclicRotation.process();
-        cyclicRotation.output();
+        cyclicRotation.output();*/
+
+        OddOccurrencesInArray oddOccurrencesInArray = new OddOccurrencesInArray();
+        oddOccurrencesInArray.input();
+        oddOccurrencesInArray.process();
+        oddOccurrencesInArray.output();
     }
 }

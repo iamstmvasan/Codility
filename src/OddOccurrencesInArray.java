@@ -1,6 +1,12 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
 /*
 Lesson 2 - Array - Program - 2
-A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
+A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element
+that has the same value, except for one element that is left unpaired.
 
 For example, in array A such that:
 
@@ -31,4 +37,24 @@ each element of array A is an integer within the range [1..1,000,000,000];
 all but one of the values in A occur an even number of times.
  */
 public class OddOccurrencesInArray {
+    List<Integer> list = new ArrayList<>();
+    int result;
+    public void input(){
+        Scanner sc = new Scanner(System.in);
+        String[] strArray = sc.nextLine().split(" ");
+        for(String string : strArray)
+            list.add(Integer.valueOf(string));
+    }
+    public void process(){
+        for(Integer i : list)
+            if(Collections.frequency(list , i) == 1){
+                result = i;
+                break;
+            }
+    }
+    public void output(){
+        System.out.println(result);
+    }
+
+
 }
